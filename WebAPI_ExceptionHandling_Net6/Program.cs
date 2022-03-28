@@ -7,6 +7,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+#region Connection String
+builder.Services.AddDbContext<LoggingAPIContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("myconn"));
+});
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
