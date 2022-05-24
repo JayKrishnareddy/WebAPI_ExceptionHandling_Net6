@@ -1,1 +1,1 @@
-# WebAPI_ExceptionHandling_Net6
+# WebAPI_ExceptionHandling_Net6.0
